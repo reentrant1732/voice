@@ -1,11 +1,12 @@
 import streamlit as st
-from pathlib import Path
+# from pathlib import Path
 import os
+import glob
 
 
 def render():
-    st.title('おさゆボイス')
-    pathlist = Path("おさゆボイス").glob('**/*.wav')
+    st.title('てっさんボイス')
+    pathlist = glob.glob('**/*.wav')
     for file in pathlist:
         name = os.path.splitext(os.path.basename(file))[0]
         name = name.replace('.O', '')

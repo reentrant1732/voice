@@ -1,17 +1,17 @@
 import streamlit as st
-import osayu
-import tetu
+import osayu.osayu
+import tetu.tetu
 
 
 def main():
     with st.sidebar:
         'ここで変更できます'
-        page = st.selectbox('', ('おさゆ', 'てっさん'), )
+        choose = st.selectbox('', ('おさゆ', 'てっさん'), )
 
-    if page == 'おさゆ':
-        osayu.render()
-    elif page == 'てっさん':
-        tetu.render()
+    if choose == 'おさゆ':
+        osayu.osayu.render()
+    elif choose == 'てっさん':
+        tetu.tetu.render()
 
 
 if __name__ == '__main__':

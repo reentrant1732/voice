@@ -1,12 +1,16 @@
 import streamlit as st
-from pathlib import Path
+# from pathlib import Path
 import os
 
 
 def render():
     st.title('てっさんボイス')
-    pathlist = Path("てっさんボイス").glob('**/*.wav')
-    for file in pathlist:
+    path = '../tetu'
+    files = []
+    for filename in os.listdir(path):
+        if os.path.isfile(os.path.join(path, filename)):  # ファイルのみ取得
+            files.append(filename)
+    for file in files:
         name = os.path.splitext(os.path.basename(file))[0]
         audio_file = open(file, 'rb')
         audio_bytes = audio_file.read()
