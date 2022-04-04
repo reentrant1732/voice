@@ -4,9 +4,8 @@ import tetu.tetu
 
 
 def main():
-    with st.sidebar:
-        'ここで変更できます'
-        choose = st.selectbox('', ('おさゆ', 'てっさん'), )
+    st.write('ここで変更できます')
+    choose = st.selectbox('', ('おさゆ', 'てっさん'), )
 
     if choose == 'おさゆ':
         osayu.osayu.render()

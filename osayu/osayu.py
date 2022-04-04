@@ -6,7 +6,7 @@ import glob
 
 def render():
     st.title('おさゆボイス')
-    pathlist = glob.glob('**/*.wav')
+    pathlist = glob.glob('osayu/*.wav')
     for file in pathlist:
         name = os.path.splitext(os.path.basename(file))[0]
         name = name.replace('.O', '')
